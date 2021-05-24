@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>SeccionHtml</title>
+    <!-- CSS Styles -->
+	<link rel="stylesheet" type="text/css" href="EstilosHelp.css">
+
+</head>
+<body>
+    <div class="H-titulo">
+        <ul class="H-titulo2">
+            <li>¿Como Puedo ayudarte?</li>
+            <li><img src="img_help/mario.gif" width="100px"></li>
+        </ul>
+    </div>
+    <ul class="secciones">
+    <li>
+        <a id="link" href="javascript:void(0);" onclick="mostrarseccion1(); ocultarseccion2();">
+        <div  class="seccion">
+            <p>¿Como comprar un producto?</p>
+        </div>
+        </a>
+    </li>
+    <li>
+        <a id="link" href="javascript:void(0);" onclick="mostrarseccion2(); ocultarseccion1();">
+        <div class="seccion">
+            <p>Preguntas Frecuentres</p>
+        </div>
+        </a>
+    </li>
+    </ul>
+    <!--Para mostrar seccion-->
+    
+	<div id="Sec1">
+		<img src="img_help/moneda.gif" width="40px" height="40px">
+        <h1 class="SecT">¿Como comprar un producto?</h1>
+        <section>
+            <article>
+                -Seleccionar el producto de tu interes en alguna de nuestras 3 secciones (juegos,hardware,software)
+                <img src="img_help/click.JPG" height="240px">
+            </article>
+            <article>
+                -Al clikear el producto este se mandara a tu carrito de compras, el cual se encuentra a la derecha de la pagina
+                <img src="img_help/imgCar.JPG" width="350px">
+            </article>
+            <article>
+                -Los productos que selecciones se sumaran al carrito, mostrando el monto total a pagar en la parte inferior
+                <img src="img_help/imgSum.JPG" height="240px">
+            </article>
+        </section>
+	</div>
+
+    <div id="Sec2">
+		<img src="img_help/Preg.gif" width="40px" height="40px">
+        <h1 class="SecT">Preguntas Frecuentes</h1>
+        <p class="pregunta">¿Cuentan con devoluciones?</p>
+        <p class="respuesta">R:15 días de satisfacción siempre y cuando el producto este tal cual como se le fue entregado.</p>
+        <P class="pregunta">¿Como creo mi cuenta?</P>
+        <p class="pregunta">¿Como accedo a mi cuenta</p>
+        <p class="pregunta">¿Cuentan con meses sin intereses</p>
+        <p class="respuesta">R:Si pero solo en algunos Productos.</p>
+        <p class="pregunta">¿Que metodos de pago manegan?</p>
+        <p class="respuesta">PayPal,MasterCard,Tarjetas de debito y credito,American Express y Visa</p>
+	</div>
+
+	<script>
+		function mostrarseccion1(){
+			document.getElementById('Sec1').style.display='block';
+		}
+
+        function mostrarseccion2(){
+            document.getElementById('Sec2').style.display='block';
+        }
+
+        function ocultarseccion1(){
+            document.getElementById('Sec1').style.display='none';
+        }
+
+        function ocultarseccion2(){
+            document.getElementById('Sec2').style.display='none';
+        }
+	</script>
+
+    <p class="casa">
+    <a href="index.html"><img src="img_help/casa.png" height="80px" width="80px"></a><br>
+    Volver a pag. Principal
+    </p>
+</body>
+</html>

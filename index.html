@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>MySetUp.NET|Proyect</title>
+	<!-- CSS Styles -->
+	<link rel="stylesheet" type="text/css" href="indexStyles.css">
+	<script>
+		var totalPrecio = 0;
+		function buy(producto){
+			alert('Has añadido ' + producto.split("-")[1] + ' al carrito.');
+
+			var product = producto.split("-")[1]
+			
+			// Localizar el precio del Juego.
+			if(producto.split("-")[0] === 'G'){
+				var price = document.getElementById(producto.split("-")[1]).innerHTML.replace('PRICE:', '').replace('MX', '').replace('$', '').replace(',', '');
+			}
+			// Localiza el precio del software.
+			else if(producto.split("-")[0] === 'S'){
+				var clas = document.getElementsByClassName('pie');
+				for(i=0;i <= clas.length;++i) {
+					var clas2 = clas[i].getElementsByTagName('p')[0].innerHTML;
+					if(clas2===product){
+						var price = clas[i].getElementsByTagName('p')[1].innerHTML.replace('$', '').replace(',', '');
+						break
+					}
+				}
+			}
+			// Localiza el precio del hardware.
+			else if(producto.split("-")[0] === 'H'){
+				var find = document.getElementsByClassName('producto');
+				for(i=0;i <= find.length;i++){
+					var element = find[i].getElementsByTagName('p')[1].innerHTML.split(",")[1].replace(" ", "");
+
+					if(element==product){
+						var price = find[i].getElementsByClassName('HardwarePrice')[0].innerHTML.replace('$', '').replace(',', '');
+						break
+					}
+				}
+			}
+
+			// Ingresar el preccio y nombre del producto al carrito.
+			var location = document.getElementById('listProducts');
+
+			var newProduct = document.createElement("LI");
+			newProduct.textContent = product + '  ' + ' PRICE: $' + price + ' MX';
+
+			location.appendChild(newProduct);
+
+			// Ingresar el total de los productos.
+			totalPrecio += parseFloat(price);
+
+			document.getElementById('totalPrice').innerHTML = 'Total:	$' + totalPrecio + ' MX';
+			
+		}
+
+	</script>
+</head>
+<body>
+		
+	<div class="container">
+		<!-- Menu de Navegacion -->
+		<div class="nav-menu">
+			<ul class="nav">
+				<ul><img src="img/icon.jpg" class="img-styl"></ul>
+				<ul class="a-nav">
+					<ul>
+						<li class="font-color-anima"><a href="#">Option</a></li>
+						<li class="font-color-anima"><a href="#">Support</a></li>
+						<li class="font-color-anima"><a href="Help.html">Help</a></li>
+					</ul>
+				</ul>
+				<ul class="User"><a href="inicioSesion.html">Iniciar Sesion</a></ul>
+			</ul>
+		</div>
+		<!-- Banner Juegos -->
+		<div class="banner">
+		</div>
+		<!-- Contenedor de VideoJuegos -->
+		<div class="main-cont-games anima-back">
+			<div class="cont-title">
+				<img src="img/control-ps5.png" class="icon-sz">
+				<h2><stron>VideoGames Section</stron></h2>
+				<img src="img/control-xbox.png" class="icon-sz">
+			</div>
+			<div class="cont-games">
+				<!-- Fila 1 -->
+				<section class="sect-game">
+					<ul class="div-acomodo">
+						<li><div class="contenedor-game" onclick="buy('G-Cold War')"><a><img src="img/cold-war.jpg" class="game-sz"><p id="Cold War">PRICE: $1,600 MX</p></a></div></li>
+						<li>
+							<section class="div-emergente">
+								<div class="flecha-right"></div>
+								<div class="square">
+									<h2 id="">Cold War</h2>
+									<hr><br>
+									<p>Vuelve la emblemática saga Black Ops con Call of Duty®: Black Ops Cold War, la secuela directa de Call of Duty®: Black Ops, el juego original favorito del público.</p>
+									<br>
+									<img src="" class="image-coldwar">
+								</div>
+							</section>
+						</li>
+					</ul>
+					<ul class="div-acomodo">
+						<li><div class="contenedor-game" onclick="buy('G-Bioshock Infinite')"><a><img src="img/bioshock3.jpg" class="game-sz"><p id='Bioshock Infinite'>PRICE: $269.99 MX</p></a></div></li>
+						<li>
+							<section class="div-emergente">
+								<div class="flecha-right"></div>
+								<div class="square">
+									<h2>Bioshock Infinite</h2>
+									<hr><br>
+									<p>BioShock Infinite es un videojuego de disparos en primera persona y la tercera entrega de la franquicia BioShock, desarrollado por Irrational Games y distribuido por 2K Games, siendo dirigido por Ken Levine.</p>
+									<img src="" class="image-bioshock">
+								</div>
+							</section>
+						</li>
+					</ul>
+					<ul class="div-acomodo">
+						<li><div class="contenedor-game" onclick="buy('G-Assassin´s Creed Syndicate')"><a><img src="img/assasins.jpg" class="game-sz"><p id='Assassin´s Creed Syndicate'>PRICE: $600 MX</p></a></div></li>
+						<li>
+							<section class="div-emergente">	
+								<div class="flecha-right"></div>
+								<div class="square">
+									<h2>Assassin´s Creed Syndicate</h2>
+									<hr><br>
+									<p>Assassin's Creed: Syndicate es un videojuego de acción-aventura de la saga Assassin's Creed, siendo desarrollado por Ubisoft Quebec. Londres, 1868. La Revolución Industrial da lugar a una era llena de innovaciones.</p>
+									<img src="" class="image-assassinsCreed">
+								</div>
+							</section>
+						</li>
+					</ul>
+					<ul class="div-acomodo">
+						<li><div class="contenedor-game" onclick="buy('G-Dragon Ball Z: Kakarot')"><a><img src="img/dragonball.png" class="game-sz"><p id='Dragon Ball Z: Kakarot'>PRICE: $1,880 MX</p></a></div></li>
+						<li>
+							<section class="div-emergente">	
+								<div class="flecha-right"></div>
+								<div class="square">
+									<h2>Dragon Ball Z: Kakarot</h2>
+									<hr><br>
+									<p>Dragon Ball Z: Kakarot es un videojuego de rol de acción, desarrollado por CyberConnect2 y publicado por Bandai Namco Entertainment. ​ Basado en la franquicia de Dragon Ball.</p>
+									<img src="" class="image-dragonBall">
+								</div>
+							</section>
+						</li>
+					</ul>
+					<ul class="div-acomodo">
+						<li>
+							<section class="div-emergente-last">	
+								<div class="square">
+									<h2>Halo Infinite</h2>
+									<hr><br>
+									<p>Hay juegos que están llamados a definir el alcance y la magnitud de una gran compañía. En el caso del coloso en expansión de Microsoft llamado Xbox Game Studios, ese juego es Halo Infinite.</p>
+									<img src="" class="image-haloinfinite">
+								</div>
+								<div class="flecha-right2"></div>
+							</section>
+						</li>
+						<li><div class="contenedor-game" onclick="buy('G-Halo Infinite')"><a><img src="img/halo.jpg" class="game-sz"><p id='Halo Infinite'>PRICE: $2,000 MX</p></a></div></li>
+					</ul>
+				</section>
+				<!-- Fila 2 -->
+				<section class="sect-game">
+					<ul class="div-acomodo">
+						<li><div class="contenedor-game" onclick="buy('G-God of War')"><a><img src="img/godofwar.jpg" class="game-sz"><p id='God of War'>PRICE: $880 MX</p></a></div></li>
+						<li>
+							<section class="div-emergente">	
+								<div class="flecha-right"></div>
+								<div class="square">
+									<h2>God of War</h2>
+									<hr><br>
+									<p>God of War es una serie de videojuegos en 3ª. persona creada por SCE Santa Monica Studio y distribuida por Sony Computer Entertainment. Se basa en las aventuras de un semidiós espartano, Kratos, quien se enfrenta a diversos personajes.</p>
+									<img src="" class="image-godOfWar">
+								</div>
+							</section>
+						</li>
+					</ul>
+					<ul class="div-acomodo">
+						<li><div class="contenedor-game" onclick="buy('G-Rainbow Six Siege')"><a><img src="img/rainbow.jpg" class="game-sz"><p id='Rainbow Six Siege'>PRICE: $349.99 MX</p></a></div></li>
+						<li>
+							<section class="div-emergente">	
+								<div class="flecha-right"></div>
+								<div class="square">
+									<h2>Rainbow Six Siege</h2>
+									<hr><br>
+									<p>Tom Clancy's Rainbow Six: Siege es un videojuego de disparos en primera persona táctico multijugador de 5 contra 5 en el cual hay 3 modos de juego, "Desactivar la bomba", "Capturar el objetivo" y "Protección del rehén".</p>
+									<img src="" class="image-rainbowSix">
+								</div>
+							</section>
+						</li>
+					</ul>
+					<ul class="div-acomodo">
+						<li><div class="contenedor-game" onclick="buy('G-Cyberpunk 77')"><a><img src="img/cyberpunk.jpg" class="game-sz"><p id='Cyberpunk 77'>PRICE: $1,299.99 MX</p></a></div></li>
+						<li>
+							<section class="div-emergente">	
+								<div class="flecha-right"></div>
+								<div class="square">
+									<h2>Cyberpunk 77</h2>
+									<hr><br>
+									<p>Cyberpunk 2077 es un videojuego desarrollado y publicado por CD Projekt. Siendo una adaptación del juego de rol de mesa Cyberpunk 2020,  se establece cincuenta y siete años más tarde en la ciudad distópica de Night City.</p>
+									<img src="" class="image-cyberPunk">
+								</div>
+							</section>
+						</li>
+					</ul>
+					<ul class="div-acomodo">
+						<li><div class="contenedor-game" onclick="buy('G-Resident Evil Village')"><a><img src="img/resident.jpg" class="game-sz"><p id='Resident Evil Village'>PRICE: $1,599.99 MX</p></a></div></li>
+						<li>
+							<section class="div-emergente">	
+								<div class="flecha-right"></div>
+								<div class="square">
+									<h2>Resident Evil Village</h2>
+									<hr><br>
+									<p>Resident Evil Village es un videojuego perteneciente al género de horror de supervivencia desarrollado y publicado por Capcom.La novena entrega de la serie principal de Resident Evil.</p>
+									<img src="" class="image-residentEvil">
+								</div>
+							</section>
+						</li>
+					</ul>
+					<ul class="div-acomodo">
+						<li>
+							<section class="div-emergente-last">	
+								<div class="square">
+									<h2>Alien Isolation</h2>
+									<hr><br>
+									<p>Alien: Isolation es un videojuego de horror de supervivencia y sigilo en primera persona desarrollado por The Creative Assembly y publicado por Sega. Este título forma parte de la franquicia de las películas Alien.</p>
+									<img src="" class="image-alienIsolation">
+								</div>
+								<div class="flecha-right2"></div>
+							</section>
+						</li>
+						<li><div class="contenedor-game" onclick="buy('G-Alien Isolation')"><a><img src="img/alien.jpg" class="game-sz"><p id='Alien Isolation'>PRICE: $255.99 MX</p></a></div></li>
+					</ul>
+				</section>
+				<!-- Fila 3 -->
+				<section class="sect-game">
+					<ul class="div-acomodo">
+						<li><div class="contenedor-game" onclick="buy('G-Mortal Kombat 11')"><a><img src="img/mortalkombat.webp" class="game-sz"><p id='Mortal Kombat 11'>PRICE: $999.99 MX</p></a></div></li>
+						<li>
+							<section class="div-emergente">	
+								<div class="flecha-right"></div>
+								<div class="square">
+									<h2>Mortal Kombat 11</h2>
+									<hr><br>
+									<p>Mortal Kombat 11 es un videojuego de lucha desarrollado por NetherRealm Studios y publicado por Warner Bros. Interactive Entertainment. Es la undécima entrega principal de la serie Mortal Kombat.</p>
+									<img src="" class="image-mortalKombat">
+								</div>
+							</section>
+						</li>
+					</ul>
+					<ul class="div-acomodo">
+						<li><div class="contenedor-game" onclick="buy('G-The Last of Us 2')"><a><img src="img/thelastofus.webp" class="game-sz"><p id='The Last of Us 2'>PRICE: $599.99 MX</p></a></div></li>
+						<li>
+							<section class="div-emergente">	
+								<div class="flecha-right"></div>
+								<div class="square">
+									<h2>The Last of Us 2</h2>
+									<hr><br>
+									<p>The Last of Us Part II es un juego de acción y aventuras de 2020 desarrollado por Naughty Dog y publicado por Sony Interactive Entertainment para PlayStation 4.  Ambientado cinco años después de The Last of Us (2013).</p>
+									<img src="" class="image-theLastofUs">
+								</div>
+							</section>
+						</li>
+					</ul>
+					<ul class="div-acomodo">
+						<li><div class="contenedor-game" onclick="buy('G-Little Nightmares 2')"><a><img src="img/littlenightmares.webp" class="game-sz"><p id='Little Nightmares 2'>PRICE: $600 MX</p></a></div></li>
+						<li>
+							<section class="div-emergente">	
+								<div class="flecha-right"></div>
+								<div class="square">
+									<h2>Little Nightmares 2</h2>
+									<hr><br>
+									<p>Little Nightmares 2 es un juego de aventuras de terror de plataformas y rompecabezas desarrollado por Tarsier Studios y producido por Bandai Namco Entertainment.</p>
+									<img src="" class="image-littleNightmares">
+								</div>
+							</section>
+						</li>
+					</ul>
+					<ul class="div-acomodo">
+						<li><div class="contenedor-game" onclick="buy('G-Jump Force')"><a><img src="img/jumpforce.jpg" class="game-sz"><p id='Jump Force'>PRICE: $1,400 MX</p></a></div></li>
+						<li>
+							<section class="div-emergente">	
+								<div class="flecha-right"></div>
+								<div class="square">
+									<h2>Jump Force</h2>
+									<hr><br>
+									<p>Jump Force es un videojuego de lucha desarrollado por Spike Chunsoft y distribuido por Bandai Namco, El juego está protagonizado por personajes de mangas publicados en la revista Shōnen Jump.</p>
+									<img src="" class="image-jumpForce">
+								</div>
+							</section>
+						</li>
+					</ul>
+					<ul class="div-acomodo">
+						<li>
+							<section class="div-emergente-last">	
+								<div class="square">
+									<h2>Sekiro: Shadows Die Twice</h2>
+									<hr><br>
+									<p>Sekiro: Shadows Die Twice es un videojuego de acción y aventura desarrollado por From Software y distribuido por Activision. El juego sigue a un shinobi del Período Sengoku, conocido como Lobo, que intenta vengarse de un clan.</p>
+									<img src="" class="image-sekiro">
+								</div>
+								<div class="flecha-right2"></div>
+							</section>
+						</li>
+						<li><div class="contenedor-game" onclick="buy('G-Sekiro: Shadows Die Twice')"><a><img src="img/sekiro.jpg" class="game-sz"><p id='Sekiro: Shadows Die Twice'>PRICE: $1,299.99 MX</p></a></div></li>
+					</ul>
+				</section>
+			</div>
+		</div>
+		<!-- Banner Software -->
+		<div class="banners">
+		</div>
+		<!-- Seccion Softwares -->
+		<div class="contenedor anima-back">
+			<div class="titulo">
+				<ul class="titulo2">
+					<li><img src="img/ProductosSoftware/MacImg.jpg" width="74px" height="62px"></li>
+					<li>Software</li>
+					<li><img src="img/ProductosSoftware/windows5.jpg" width="50px" height="50px"></li>
+				</ul>
+			</div>
+			<!----Producto 1-->
+			<div class="Producto" onclick="buy('S-Windows 10 Pro Spanish')">
+				<div class="foto">
+					<img src="img/ProductosSoftware/P1.jpg">
+				</div>
+	
+				<div class="pie">
+					<p>Windows 10 Pro Spanish</p>
+					<p class="precio">$3,499</p>
+				</div>
+			</div>
+			<!---Cierrre Producto 1-->
+				
+			<!----Producto 2-->
+			<div class="Producto" onclick="buy('S-Windows Home 10 spanish')">
+				<div class="foto">
+					<img src="img/ProductosSoftware/P2.jpg">
+				</div>
+				<div class="pie">
+					<p>Windows Home 10 spanish</p>
+					<p class="precio">$2,599</p>
+				</div>
+			</div>
+			<!---Cierrre Producto 2-->	
+			<!----Producto 3-->
+			<div class="Producto" onclick="buy('S-Microsof365 Suscripcion Anual')">
+				<div class="foto">
+					<img src="img/ProductosSoftware/P3.jpg" alt="">
+				</div>
+				<div class="pie">
+					<p>Microsof365 Suscripcion Anual</p>
+					<p class="precio">$899</p>
+				</div>
+			</div>
+			<!---Cierrre Producto 3-->
+	
+			<!----Producto 4-->
+			<div class="Producto" onclick="buy('S-Microsof 365 Empresa Suscripcion 12meses')">
+				<div class="foto">
+					<img src="img/ProductosSoftware/P4.jpg">
+				</div>
+				<div class="pie">
+					<p>Microsof 365 Empresa Suscripcion 12meses</p>
+					<p class="precio">$3500</p>
+				</div>
+			</div>
+			<!---Cierrre Producto 4-->
+			
+			<!----Producto 5-->
+			<div class="Producto" onclick="buy('S-McAffe AntiVirus 1año Suscrpcion')">
+				<div class="foto">
+					<img src="img/ProductosSoftware/An.jpg">
+				</div>
+				<div class="pie">
+					<p>McAffe AntiVirus 1año Suscrpcion</p>
+					<p class="precio">$370.67</p>
+				</div>
+			</div>
+			<!---Cierrre Producto 5-->
+			
+			<!----Producto 6-->
+			<div class="Producto" onclick="buy('S-Norton360 Deluxe 1año Suscripcion')">
+				<div class="foto">
+					<img src="img/ProductosSoftware/An2.jpg">
+				</div>
+				<div class="pie">
+					<p>Norton360 Deluxe 1año Suscripcion</p>
+					<p class="precio">$549</p>
+				</div>
+			</div>
+			<!---Cierrre Producto 6-->
+			
+			<!----Producto 7-->
+			<div class="Producto" onclick="buy('S-Kaspersky Anti-Virus 1año Suscripcion')">
+				<div class="foto">
+					<img src="img/ProductosSoftware/An3.jpg">
+				</div>
+				<div class="pie">
+					<p>Kaspersky Anti-Virus 1año Suscripcion</p>
+					<p class="precio">$449</p>
+				</div>
+			</div>
+			<!---Cierrre Producto 7-->
+	
+			<!----Producto 8-->
+			<div class="Producto" onclick="buy('S-Avast Premium Security 1año Suscripcion')">
+				<div class="foto">
+					<img src="img/ProductosSoftware/An4.jpg">
+				</div>
+				<div class="pie">
+					<p>Avast Premium Security 1año Suscripcion</p>
+					<p class="precio">$1,206</p>
+				</div>
+			</div>
+			<!---Cierrre Producto 8-->
+		</div>
+		<!-- Banner Hardware -->
+		<div class="bannerh">		
+		</div>
+		<!-- SECCION HARDWARE -->
+		<div id="contenedor" class="anima-back">
+			<div id="titulo">
+				<ul class="titulo1">
+					<li><img src="img/ProductosHardware/ryzen.jpg" width="100" height="40" ></li>
+					<li><h1>HARDWARE</h1></li>
+					<li><img src="img/ProductosHardware/intel.jpg" width="100" height="40" ></li>
+				</ul>
+			</div>
+			<div class="orderHardware">
+				<div class="producto" onclick="buy('H-GTX 1660 Ti ROG')">
+					<center>
+						<br>
+						<p><img src="img/ProductosHardware/1660ti.jpg" width="110px"></p>
+					</center>
+					<br>
+					<p> Tarjeta de Video ASUS NVIDIA GeForce, GTX 1660 Ti ROG, Strix Gaming OC Edition, 6GB 192-bit GDDR6 <br><br><span class="HardwarePrice">$12,000</span></p>
+				</div>
+				<div class="producto" onclick="buy('H-Ryzen 5 3600')">
+					<center>
+						<br>
+						<p><img src="img/ProductosHardware/r5 3600.jpg"width="150"></p>
+					</center>
+					<br>
+					<p> Procesador AMD, Ryzen 5 3600, S-AM4, 3.60GHz, 32MB L3 Cache <br><br><span class="HardwarePrice">$4,800</span></p>
+				</div>
+				<div class="producto" onclick="buy('H-RAM XPG SPECTRIX 8G')">
+					<center>
+						<br>
+						<p><img src="img/ProductosHardware/ram.jpg"width="110"></p>
+					</center>
+					<br>
+					<p> Memoria, RAM XPG SPECTRIX 8G, D50 RGB Tungsten Grey DDR4, 3200MHz, Non-ECC <br><br><span class="HardwarePrice">$800</span></p>
+				</div>
+				<div class="producto" onclick="buy('H-ASRock Micro ATX B450M')">
+					<center>
+						<br>
+						<p><img src="img/ProductosHardware/mother.jpg"width="120"></p>
+					</center>
+					<br>
+					<p> Tarjeta Madre, ASRock Micro ATX B450M, Steel Legend, S-AM4,64GB DDR4 para AMD <br><br><span class="HardwarePrice">$2,500</span></p>
+				</div>
+				<div class="producto" onclick="buy('H-Game Factor PSG650 80 PLUS Bronze')">
+					<center>
+						<br>
+					<p><img src="img/ProductosHardware/fuente.jpg"width="120"></p>
+					</center>
+					<br>
+					<p> Fuente de Poder, Game Factor PSG650 80 PLUS Bronze, 20+4 pin ATX, 120mm, 650W <br><br><span class="HardwarePrice">$720</span></p>
+				</div>
+				<div class="producto" onclick="buy('H-Cooler Master MasterBox MB510L')">
+					<center>
+						<br>
+					<p><img src="img/ProductosHardware/gabinete.jpg"width="180"></p>
+					</center>
+					<br>
+					<p> Gabinete, Cooler Master MasterBox MB510L, con Ventana, Midi-Tower, ATX/Micro-ATX/Mini-ITX, USB 3.1 <br><br><span class="HardwarePrice">$1,400</span></p>
+				</div>
+				<div class="producto" onclick="buy('H-Intel Core i5 10400F')">
+					<center>
+						<br>
+					<p><img src="img/ProductosHardware/core.png"width="100"></p>
+					</center>
+					<br>
+					<p>Procesador, Intel Core i5 10400F, S-1200, 2.90GHz, Six-Core, 12MB Cache (10ma. Generación) <br><br><span class="HardwarePrice">$4,500</span></p>
+				</div>
+				<div class="producto" onclick="buy('H-Gigabyte micro ATX B460M')">
+					<center>
+						<br>
+					<p><img src="img/ProductosHardware/motherin.jpg"width="100"></p>
+					</center>
+					<br>
+					<p> Tarjeta Madre, Gigabyte micro ATX B460M, DS3H, S-1200, Intel B460, HDMI, 128GB DDR4 para Intel <br><br><span class="HardwarePrice">$2,500</span></p>
+				</div>
+				<div class="producto" onclick="buy('H-PC Gamer Geforce RTX 3070')">
+					<center>
+						<br>
+					<p><img src="img/ProductosHardware/compu1.jpg"width="80"></p>
+					</center>
+					<br>
+					<p> Xtreme, PC Gamer Geforce RTX 3070, Ryzen 7 3800X 32GB SSD 480GB 2TB WiFi <br><br><span class="HardwarePrice">$49,950</span></p>
+				</div>
+				<div class="producto" onclick="buy('H-Xtreme PC Gaming  GeForce GTX 1660')">
+					<center>
+						<br>
+					<p><img src="img/ProductosHardware/compu2.jpg"width="80"></p>
+					</center>
+					<br>
+					<p>Computadora Gamer, Xtreme PC Gaming  GeForce GTX 1660, CM-89102, Intel Core i5-10400F, 16GB, 500GB SSD, Incluye Monitor, Teclado y Mouse <br><br><span class="HardwarePrice">$29,200</span></p>
+				</div>
+				<div class="producto" onclick="buy('H-PC Gamer Geforce RTX 2060')">
+					<center>
+						<br>
+					<p><img src="img/ProductosHardware/compu3.jpeg"width="105"></p>
+					</center>
+					<br>
+					<p> Xtreme, PC Gamer Geforce RTX 2060, Ryzen 5 16GB SSD 3TB Monitor 27 144Hz RGB XTREME PC <br><br><span class="HardwarePrice">$31,200</span></p>
+				</div>
+				<div class="producto" onclick="buy('H-Pc Amd Radeon Rx 5700 Xt')">
+					<center>
+						<br>
+					<p><img src="img/ProductosHardware/compu5.webp"width="105"></p>
+					</center>
+					<br>
+					<p> Xtreme, Pc Amd Radeon Rx 5700 Xt, Ryzen 5 5600x 16gb Ssd 3tb <br><br><span class="HardwarePrice">$36,900</span></p>
+				</div>
+			</div>
+		</div>
+		<!-- Carrito de Compras -->
+		<section class="order">
+			<div class="pestaña"></div>
+			<div class="div-carrito-compra"><a href="#" class="carrito-compra"><img src="img/cesta-de-la-compra.png"></a></div>
+			<div class="productos-carrito">
+				<h3>Productos en Carrito:</h3>
+				<ul id="listProducts">
+				</ul>
+				<h3 id='totalPrice'>Total: $0</h3>
+			</div>
+		</section>
+		<!-- Contenedor Final -->
+		<div class="last-main-container">
+			<div class="last-container">
+				<ul class="header">
+					<li><img src="img/moneda1.png" class="icon-sz"></li>
+					<li>Los CryptoBoys.com</li>
+					<li><img src="img/moneda2.png" class="image-sz"></li>
+				</ul>
+				<ul class="last-container-desc">
+					<li>
+						<ul>
+							<header>Asistencia</header>
+							<li><a href="Help.html">Ayuda</a></li>
+						</ul>
+					</li>
+					<li>
+						<ul>
+							<header>Soporte</header>
+							<li><a href="#">Políticas de privacidad</a></li>
+						</ul>
+					</li>
+					<li class="group-items">
+						<ul>
+							<header>Contact us</header>
+							<li><a href="#">Nicolax</a></li>
+							<li><a href="#">Visnes</a></li>
+							<li><a href="#">GoldenNept</a></li>
+						</ul>
+						<ul>
+							<li><a href="#"><img src="img/instagram-icon.png" width="50px"></a></li>
+							<li><a href="#"><img src="img/instagram-icon.png" width="50px"></a></li>
+							<li><a href="#"><img src="img/instagram-icon.png" width="50px"></a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

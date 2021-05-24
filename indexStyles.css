@@ -1,0 +1,1046 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	font-family: Copperplate,Copperplate Gothic Light,fantasy;
+	font-size: 18px;
+	background-color: #000000;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='49' viewBox='0 0 28 49'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='hexagons' fill='%23ff0400' fill-opacity='0.39' fill-rule='nonzero'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.container {
+	width: 100%;
+}
+
+/* -----------------------Carrito de Compra----------------------- */
+.div-carrito-compra {
+	width: 0px;
+	height: 100px;
+	display: flex;
+	background-color: #ffffff;
+	border-radius: 2%;
+	transition: all 1s;
+}
+
+.order:hover .div-carrito-compra {
+	width: 100px;
+	height: 100px;
+}
+
+.carrito-compra img {
+	width: 100px;
+}
+
+.pestaña {
+	width:0px;
+	height:10px;
+	border-bottom:30px solid transparent;  /* izquierda flecha */
+	border-top:30px solid transparent; /* derecha flecha */
+	border-right:30px solid white; /* base flecha y color*/
+	font-size:0px;
+	line-height:0px;
+}
+
+.order {
+	display: flex;
+	position: fixed;
+	right: 0px;
+	top: 100px;
+}
+
+.productos-carrito {
+	width: 0px;
+	height: auto;
+	border: 4px groove #302a38;
+	border-radius: 2%;
+	background-color: bisque;
+	transition: all 3s;
+}
+
+.productos-carrito ul {
+	margin-bottom: 10px;
+}
+
+.productos-carrito h3 {
+	text-align: center;
+	margin: 10px 20px;
+}
+
+.productos-carrito li {
+	line-height: 25px;
+}
+
+.productos-carrito ul {
+	margin-left: 18px;
+}
+
+.order:hover .productos-carrito {
+	width: 270px;
+	padding: 2px;
+	transition-delay: 5s;
+}
+
+#totalPrice {
+	text-align: left;
+}
+
+/*--------------------------------------------------------------*/
+/* ------------------------------------ Menu de Navegacion ------------------------- */
+.nav-menu {
+	width: 1800px;
+	height: 110px;
+	margin: auto;
+	margin-top: 10px;
+	background-color: #302a38;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='50' height='40' viewBox='0 0 50 40'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23089bee' fill-opacity='0.4'%3E%3Cpath d='M40 10L36.67 0h-2.11l3.33 10H20l-2.28 6.84L12.11 0H10l6.67 20H10l-2.28 6.84L2.11 10 5.44 0h-2.1L0 10l6.67 20-3.34 10h2.11l2.28-6.84L10 40h20l2.28-6.84L34.56 40h2.1l-3.33-10H40l2.28-6.84L47.89 40H50l-6.67-20L50 0h-2.1l-5.62 16.84L40 10zm1.23 10l-2.28-6.84L34 28h4.56l2.67-8zm-10.67 8l-2-6h-9.12l2 6h9.12zm-12.84-4.84L12.77 38h15.79l2.67-8H20l-2.28-6.84zM18.77 20H30l2.28 6.84L37.23 12H21.44l-2.67 8zm-7.33 2H16l-4.95 14.84L8.77 30l2.67-8z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+
+	animation-name: mi_animacion;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease;
+}
+
+.nav {
+	display: flex;
+	justify-content: space-between;
+	padding-top: 10px;
+}
+
+.nav ul {
+	list-style: none;
+	display: flex;
+}
+
+.nav ul ul li a {
+	text-decoration: none;
+	color: white;
+	font-size: 28px;
+}
+
+.nav ul ul li a:hover {
+	border-bottom: 2px solid white;
+}
+
+.User {
+	margin-right: 50px;
+}
+
+.User a {
+	margin: 20px 0px 10px 0px;
+	text-decoration: none;
+	color: white;
+	font-size: 35px;
+}
+.User:hover {
+	border-bottom: 2px solid white;
+}
+
+.a-nav {
+	flex: 1;
+	margin: 30px 0px 0px 150px;
+}
+
+.a-nav ul li {
+	margin: 5px 60px;
+}
+
+.a-nav ul li a {
+	font-size: 25px;
+}
+
+.img-styl {
+	width: 130px;
+	margin: 8px;
+	position: absolute;
+}
+
+/*-------------------------------------------------------------------------------------------------------------*/
+		/* ANIMACIONES */
+.anima {
+	animation-name: mi_animacion;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease;
+}
+
+@keyframes mi_animacion {
+	0% {border:6px groove red;}
+	25% {border:6px groove orange;}
+	50% {border:6px groove green;}
+	75% {border:6px groove pink;}
+	100% {border:6px groove yellow;}
+}
+
+.anima-back {
+	animation-name: back-anima;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease;
+
+	border: 10px groove black;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='42' height='58' viewBox='0 0 42 58'%3E%3Cg fill='%23000000' fill-opacity='0.4'%3E%3Cpath fill-rule='evenodd' d='M12 18h12v18h6v4H18V22h-6v-4zm-6-2v-4H0V0h36v6h6v36h-6v4h6v12H6v-6H0V16h6zM34 2H2v8h24v24h8V2zM6 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm8 0a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm8 0a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm8 0a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm0 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm0 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm0 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM2 50h32v-8H10V18H2v32zm28-6a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm0-8a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm0-8a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm0-8a2 2 0 1 0 0 4 2 2 0 0 0 0-4z'/%3E%3C/g%3E%3C/svg%3E");
+	border-radius: 5%;
+}
+
+@keyframes back-anima {
+	0% {background-color: red;}
+	25% {background-color: orange;}
+	50% {background-color: green;}
+	75% {background-color: pink;}
+	100% {background-color: yellow;}
+}
+
+.font-color-anima a:hover {
+	animation-name: color-anima;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease;
+}
+
+@keyframes color-anima {
+	0% {color: red;}
+	25% {color: orange;}
+	50% {color: green;}
+	75% {color: pink;}
+	100% {color: yellow;}
+}
+
+
+/*--------------------------------------------*/
+
+/* -------------------------------------------------------------- Contenedor de Video Juegos ----------------------------------------- */
+.main-cont-games {
+	width: 1600px;
+	height: 1600px;
+	margin: auto;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	border: 5px groove black;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='42' height='58' viewBox='0 0 42 58'%3E%3Cg fill='%23000000' fill-opacity='0.4'%3E%3Cpath fill-rule='evenodd' d='M12 18h12v18h6v4H18V22h-6v-4zm-6-2v-4H0V0h36v6h6v36h-6v4h6v12H6v-6H0V16h6zM34 2H2v8h24v24h8V2zM6 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm8 0a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm8 0a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm8 0a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm0 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm0 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm0 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM2 50h32v-8H10V18H2v32zm28-6a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm0-8a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm0-8a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm0-8a2 2 0 1 0 0 4 2 2 0 0 0 0-4z'/%3E%3C/g%3E%3C/svg%3E");
+
+}
+
+/* --Div Title-- */
+.cont-title {
+	width: 100%;
+	justify-content: center;
+	display: flex;
+	padding: 25px 0px;
+	border-bottom: 4px groove black;
+}
+
+.cont-title h2 {
+	border-bottom: 3px solid black;
+	font-size: 40px;
+}
+
+.icon-sz {
+	width: 60px;
+	margin: 0px 25px;
+}
+
+
+/* --Div Games-- */
+.cont-games {
+	width: 90%;
+	margin: auto;
+}
+
+.sect-game {
+	display: flex;
+	justify-content: space-between;
+	position: relative;
+}
+
+.contenedor-game {
+	border: 5px groove white;
+	width: 200px;
+	margin: 30px 0px;
+	padding: 5px;
+	background-color: #000000;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='18' viewBox='0 0 100 18'%3E%3Cpath fill='%236b6b6b' fill-opacity='0.4' d='M61.82 18c3.47-1.45 6.86-3.78 11.3-7.34C78 6.76 80.34 5.1 83.87 3.42 88.56 1.16 93.75 0 100 0v6.16C98.76 6.05 97.43 6 96 6c-9.59 0-14.23 2.23-23.13 9.34-1.28 1.03-2.39 1.9-3.4 2.66h-7.65zm-23.64 0H22.52c-1-.76-2.1-1.63-3.4-2.66C11.57 9.3 7.08 6.78 0 6.16V0c6.25 0 11.44 1.16 16.14 3.42 3.53 1.7 5.87 3.35 10.73 7.24 4.45 3.56 7.84 5.9 11.31 7.34zM61.82 0h7.66a39.57 39.57 0 0 1-7.34 4.58C57.44 6.84 52.25 8 46 8S34.56 6.84 29.86 4.58A39.57 39.57 0 0 1 22.52 0h15.66C41.65 1.44 45.21 2 50 2c4.8 0 8.35-.56 11.82-2z'%3E%3C/path%3E%3C/svg%3E");
+}
+
+.contenedor-game a {
+	text-decoration: none;
+	color: #ffffff;
+}
+
+.contenedor-game:hover {
+	animation: border-anima 5s linear infinite;
+}
+
+@keyframes border-anima {
+	0% {border: 10px groove green;}
+	20% {border: 10px groove turquoise;}
+	40% {border: 10px groove brown;}
+	60% {border: 10px groove blueviolet;}
+	80% {border: 10px groove purple;}
+	100% {border: 10px groove black;}
+}
+
+.contenedor-game p {
+	text-align: center;
+	margin: 5px 3px;
+}
+
+.game-sz {
+	width: 200px;
+	height: 320px;
+	border-bottom: 5px solid white;
+	margin-bottom: 5px;
+}
+
+/* DIV de videojuegos emergente */
+.flecha-right {
+	width:0px;
+	height:200px;
+	border-bottom:30px solid transparent;  /* izquierda flecha */
+	border-top:30px solid transparent; /* derecha flecha */
+	border-right:30px solid black; /* base flecha y color*/
+	font-size:0px;
+	line-height:0px;
+}
+
+.flecha-right2 {
+	width:0px;
+	height:200px;
+	border-bottom:30px solid transparent;  /* izquierda flecha */
+	border-top:30px solid transparent; /* derecha flecha */
+	border-left:30px solid black; /* base flecha y color*/
+	font-size:0px;
+	line-height:0px;
+}
+
+.square {
+	width: 460px;
+	border-radius: 3px 3px 3px 3px;
+	height: 320px;
+	background-color: #65606c;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23ffffff' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+	border: 10px groove black;
+
+	padding: 10px;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.div-emergente {
+	display: flex;
+	position: absolute;
+	top: -200px;
+
+	visibility: hidden;
+	transition: visibility 0s;
+}
+
+.div-emergente-last {
+	display: flex;
+	position: absolute;
+	right: 230px;
+	top: -250px;
+
+	visibility: hidden;
+	transition: visibility 0s;
+}
+
+ .div-acomodo  {
+	list-style: none;
+	display: flex;
+}
+
+.div-acomodo:hover .div-emergente{
+	visibility: visible;
+	transition-delay: .5s;
+}
+
+.div-acomodo:hover .div-emergente-last{
+	visibility: visible;
+	transition-delay: .5s;
+}
+
+/* CONTENIDO DE LOS DIVS EMERGENTES */
+.square h2 {
+	text-align: center;
+}
+
+.square img {
+	width: 250px;
+	transition: width 2s;
+	display: block;
+	margin: auto;
+	margin-top: 10px;
+	border: 3px groove black;
+}
+
+.square img:active {
+	width: 400px;
+}
+
+/* --FILA 1-- */
+.image-coldwar {
+	animation: img-coldwar 8s linear infinite;
+	animation-direction: alternate;
+}
+
+@keyframes img-coldwar {
+	0%{content: url("img/ColdWar/img1.jpg");}
+	25%{content: url("img/ColdWar/img1.jpg");}
+	50%{content: url("img/ColdWar/img2.jpg");}
+	75%{content: url("img/ColdWar/img3.jpg");}
+	100%{content: url("img/ColdWar/img4.jpg");}
+}
+
+.image-bioshock {
+	animation: img-bioshock 8s linear infinite;
+	animation-direction: alternate;
+}
+
+@keyframes img-bioshock {
+	0%{content: url("img/BioshockInfinite/img1.jpg");}
+	25%{content: url("img/BioshockInfinite/img1.jpg");}
+	50%{content: url("img/BioshockInfinite/img2.jpg");}
+	75%{content: url("img/BioshockInfinite/img3.jpg");}
+	100%{content: url("img/BioshockInfinite/img4.jpg");}
+}
+
+.image-assassinsCreed {
+	animation: img-assassinsCreed 8s linear infinite;
+	animation-direction: alternate;
+}
+
+@keyframes img-assassinsCreed {
+	0%{content: url("img/AssassinsCreed/img1.jpg");}
+	25%{content: url("img/AssassinsCreed/img1.jpg");}
+	50%{content: url("img/AssassinsCreed/img2.jpg");}
+	75%{content: url("img/AssassinsCreed/img3.jpg");}
+	100%{content: url("img/AssassinsCreed/img4.jpg");}
+}
+
+.image-dragonBall {
+	animation: img-dragonBall 8s linear infinite;
+	animation-direction: alternate;
+}
+
+@keyframes img-dragonBall {
+	0%{content: url("img/DragonBall/img1.jpg");}
+	25%{content: url("img/DragonBall/img1.jpg");}
+	50%{content: url("img/DragonBall/img2.jpg");}
+	75%{content: url("img/DragonBall/img3.jpg");}
+	100%{content: url("img/DragonBall/img4.jpg");}
+}
+
+.image-haloinfinite {
+	animation: img-haloinfinite 8s linear infinite;
+	animation-direction: alternate;
+}
+
+@keyframes img-haloinfinite {
+	0%{content: url("img/HaloInfinite/img1.d474bcb2-4964-4fcd-8e56-51de78ed220a");}
+	25%{content: url("img/HaloInfinite/img1.d474bcb2-4964-4fcd-8e56-51de78ed220a");}
+	50%{content: url("img/HaloInfinite/img2.jpg");}
+	75%{content: url("img/HaloInfinite/img3.jpg");}
+	100%{content: url("img/HaloInfinite/img4.jpg");}
+}
+
+
+/* --FILA 2-- */
+.image-godOfWar {
+	animation: img-godOfWar 8s linear infinite;
+	animation-direction: alternate;
+}
+
+@keyframes img-godOfWar {
+	0%{content: url("img/GodofWar/img1.jpg");}
+	25%{content: url("img/GodofWar/img1.jpg");}
+	50%{content: url("img/GodofWar/img2.jpg");}
+	75%{content: url("img/GodofWar/img3.jpg");}
+	100%{content: url("img/GodofWar/img4.jpg");}
+}
+
+.image-rainbowSix {
+	animation: img-rainbowSix 8s linear infinite;
+	animation-direction: alternate;
+}
+
+@keyframes img-rainbowSix {
+	0%{content: url("img/RainbowSix/img1.jpg");}
+	25%{content: url("img/RainbowSix/img1.jpg");}
+	50%{content: url("img/RainbowSix/img2.jpg");}
+	75%{content: url("img/RainbowSix/img3.jpg");}
+	100%{content: url("img/RainbowSix/img4.jpg");}
+}
+
+.image-cyberPunk {
+	animation: img-cyberPunk 8s linear infinite;
+	animation-direction: alternate;
+}
+
+@keyframes img-cyberPunk {
+	0%{content: url("img/Cyberpunk/img1.png");}
+	25%{content: url("img/Cyberpunk/img1.png");}
+	50%{content: url("img/Cyberpunk/img2.jpg");}
+	75%{content: url("img/Cyberpunk/img3.jpg");}
+	100%{content: url("img/Cyberpunk/img4.jpg");}
+}
+
+.image-residentEvil {
+	animation: img-residentEvil 8s linear infinite;
+	animation-direction: alternate;
+}
+
+@keyframes img-residentEvil {
+	0%{content: url("img/ResidentEvil/img1.jpg");}
+	25%{content: url("img/ResidentEvil/img1.jpg");}
+	50%{content: url("img/ResidentEvil/img2.jpg");}
+	75%{content: url("img/ResidentEvil/img3.jpg");}
+	100%{content: url("img/ResidentEvil/img4.jpg");}
+}
+
+.image-alienIsolation {
+	animation: img-alienIsolation 8s linear infinite;
+	animation-direction: alternate;
+}
+
+@keyframes img-alienIsolation {
+	0%{content: url("img/AlienIsolation/img1.webp");}
+	25%{content: url("img/AlienIsolation/img1.webp");}
+	50%{content: url("img/AlienIsolation/img2.jpg");}
+	75%{content: url("img/AlienIsolation/img3.jpg");}
+	100%{content: url("img/AlienIsolation/img4.jpg");}
+}
+
+/* --FILA 3-- */
+.image-alienIsolation {
+	animation: img-alienIsolation 8s linear infinite;
+	animation-direction: alternate;
+}
+
+@keyframes img-alienIsolation {
+	0%{content: url("img/AlienIsolation/img1.webp");}
+	25%{content: url("img/AlienIsolation/img1.webp");}
+	50%{content: url("img/AlienIsolation/img2.jpg");}
+	75%{content: url("img/AlienIsolation/img3.jpg");}
+	100%{content: url("img/AlienIsolation/img4.jpg");}
+}
+
+.image-mortalKombat {
+	animation: img-mortalKombat 8s linear infinite;
+	animation-direction: alternate;
+}
+
+@keyframes img-mortalKombat {
+	0%{content: url("img/MortalKombat/img1.jpg");}
+	25%{content: url("img/MortalKombat/img1.jpg");}
+	50%{content: url("img/MortalKombat/img2.jpg");}
+	75%{content: url("img/MortalKombat/img3.jpg");}
+	100%{content: url("img/MortalKombat/img4.jpg");}
+}
+
+.image-theLastofUs {
+	animation: img-theLastofUs 8s linear infinite;
+	animation-direction: alternate;
+}
+
+@keyframes img-theLastofUs {
+	0%{content: url("img/TheLastofUs/img1.jpg");}
+	25%{content: url("img/TheLastofUs/img1.jpg");}
+	50%{content: url("img/TheLastofUs/img2.jpg");}
+	75%{content: url("img/TheLastofUs/img3.jpg");}
+	100%{content: url("img/TheLastofUs/img4.webp");}
+}
+
+.image-littleNightmares {
+	animation: img-littleNightmares 8s linear infinite;
+	animation-direction: alternate;
+}
+
+@keyframes img-littleNightmares {
+	0%{content: url("img/LitleNightmares/img1.jpeg");}
+	25%{content: url("img/LitleNightmares/img1.jpeg");}
+	50%{content: url("img/LitleNightmares/img2.jpg");}
+	75%{content: url("img/LitleNightmares/img3.png");}
+	100%{content: url("img/LitleNightmares/img4.jpg");}
+}
+
+.image-jumpForce {
+	animation: img-jumpForce 8s linear infinite;
+	animation-direction: alternate;
+}
+
+@keyframes img-jumpForce {
+	0%{content: url("img/JumpForce/img1.jpg");}
+	25%{content: url("img/JumpForce/img1.jpg");}
+	50%{content: url("img/JumpForce/img2.jpg");}
+	75%{content: url("img/JumpForce/img3.jpg");}
+	100%{content: url("img/JumpForce/img4.jpg");}
+}
+
+.image-sekiro {
+	animation: img-sekiro 8s linear infinite;
+	animation-direction: alternate;
+}
+
+@keyframes img-sekiro {
+	0%{content: url("img/Sekiro/img1.jpg");}
+	25%{content: url("img/Sekiro/img1.jpg");}
+	50%{content: url("img/Sekiro/img2.jpg");}
+	75%{content: url("img/Sekiro/img3.jpg");}
+	100%{content: url("img/Sekiro/img4.jpg");}
+}
+
+
+/*--------------------------------------------------------------------------------------------------------------------------*/
+/* -----------------------------------------------------------SECCION DE SOFTWARE-------------------------------------------*/
+.contenedor{
+    width: 1600px;
+	height: 1000px;
+	margin: auto;
+	margin-top: 10px;
+	margin-bottom: 60px;
+}
+
+.titulo{
+    width: 100%;
+    height: 69px;
+    margin:auto;
+	margin-bottom: 50px;
+    background-color: #9ce3e0;
+    background-color: #2a2336;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Cg fill='%23103bbd' fill-opacity='0.4'%3E%3Cpath d='M12 0h18v6h6v6h6v18h-6v6h-6v6H12v-6H6v-6H0V12h6V6h6V0zm12 6h-6v6h-6v6H6v6h6v6h6v6h6v-6h6v-6h6v-6h-6v-6h-6V6zm-6 12h6v6h-6v-6zm24 24h6v6h-6v-6z'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
+    text-align: center; 
+    
+}
+
+.titulo2{
+	display: flex;
+    justify-content: center;
+    list-style: none;
+    
+    
+}
+
+.titulo2 li{
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+	color: white;
+	font-size: 40px;
+}
+
+
+.Producto{
+	margin: 50px 70px 50px 160px;
+	float: left;
+	width: 150px;
+	margin-top: 10px;
+
+	 
+	animation-name: mi_animacion2;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease;
+}
+
+
+.Producto img{
+	width: 100%;
+	height:auto;
+}
+
+.Producto:hover{
+	border: 1px solid lightcoral;
+	transform:scale(1.2);
+}
+
+.pie{
+	text-align: center;
+	padding: 10px;
+	background-color: #D7DBDD;
+}
+
+.precio{
+	color: red;
+}
+
+
+@keyframes mi_animacion2 {
+	0% {border:6px groove white;}
+	100% {border:6px groove red;}
+}
+
+/*--------------------------------------------------------------------------------------------------------------------------*/
+/* -----------------------------------------------------------SECCION DE HARDWARE-------------------------------------------*/
+p {
+	
+}
+  
+h1 {
+	color:white;
+	font-size: 40px;
+}
+.titulo1{
+	display: flex;
+	justify-content:center;
+	list-style: none;
+}
+.titulo1 li{
+	padding:5px;
+	text-align: center;
+	text-decoration:none;
+	color: white;
+	font-size: 22px;
+}
+@keyframes mi_animacion {
+	0% {border:6px groove red;}
+	25% {border:6px groove orange;}
+	50% {border:6px groove green;}
+	75% {border:6px groove pink;}
+	100% {border:6px groove yellow;}
+}
+.animab {
+	animation-name: mi_animacionb;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease;
+}
+@keyframes mi_animacionb {
+	0% {background-color: red;}
+	25% {background-color:orange;}
+	50% {background-color: green;}
+	75% {background-color: pink;}
+	100% {border:6px groove yellow;}
+}
+
+#contenedor {
+	width: 1600px;
+	height: 1000px;
+	margin: auto;
+	margin-bottom: 60px;
+	margin-top: 10px;
+	padding: 10px;
+}
+
+.orderHardware {
+	margin-left: 50px;
+}
+
+#titulo {
+	width: 90%;
+	height: 80px;
+	margin: auto;
+	padding: 15px;
+	margin-top: 15px;
+	animation-name: mi_animacionb;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease;
+	background-color: #000000;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 304 304' width='304' height='304'%3E%3Cpath fill='%234a9003' fill-opacity='0.4' d='M44.1 224a5 5 0 1 1 0 2H0v-2h44.1zm160 48a5 5 0 1 1 0 2H82v-2h122.1zm57.8-46a5 5 0 1 1 0-2H304v2h-42.1zm0 16a5 5 0 1 1 0-2H304v2h-42.1zm6.2-114a5 5 0 1 1 0 2h-86.2a5 5 0 1 1 0-2h86.2zm-256-48a5 5 0 1 1 0 2H0v-2h12.1zm185.8 34a5 5 0 1 1 0-2h86.2a5 5 0 1 1 0 2h-86.2zM258 12.1a5 5 0 1 1-2 0V0h2v12.1zm-64 208a5 5 0 1 1-2 0v-54.2a5 5 0 1 1 2 0v54.2zm48-198.2V80h62v2h-64V21.9a5 5 0 1 1 2 0zm16 16V64h46v2h-48V37.9a5 5 0 1 1 2 0zm-128 96V208h16v12.1a5 5 0 1 1-2 0V210h-16v-76.1a5 5 0 1 1 2 0zm-5.9-21.9a5 5 0 1 1 0 2H114v48H85.9a5 5 0 1 1 0-2H112v-48h12.1zm-6.2 130a5 5 0 1 1 0-2H176v-74.1a5 5 0 1 1 2 0V242h-60.1zm-16-64a5 5 0 1 1 0-2H114v48h10.1a5 5 0 1 1 0 2H112v-48h-10.1zM66 284.1a5 5 0 1 1-2 0V274H50v30h-2v-32h18v12.1zM236.1 176a5 5 0 1 1 0 2H226v94h48v32h-2v-30h-48v-98h12.1zm25.8-30a5 5 0 1 1 0-2H274v44.1a5 5 0 1 1-2 0V146h-10.1zm-64 96a5 5 0 1 1 0-2H208v-80h16v-14h-42.1a5 5 0 1 1 0-2H226v18h-16v80h-12.1zm86.2-210a5 5 0 1 1 0 2H272V0h2v32h10.1zM98 101.9V146H53.9a5 5 0 1 1 0-2H96v-42.1a5 5 0 1 1 2 0zM53.9 34a5 5 0 1 1 0-2H80V0h2v34H53.9zm60.1 3.9V66H82v64H69.9a5 5 0 1 1 0-2H80V64h32V37.9a5 5 0 1 1 2 0zM101.9 82a5 5 0 1 1 0-2H128V37.9a5 5 0 1 1 2 0V82h-28.1zm16-64a5 5 0 1 1 0-2H146v44.1a5 5 0 1 1-2 0V18h-26.1zm102.2 270a5 5 0 1 1 0 2H98v14h-2v-16h124.1zM242 149.9V160h16v34h-16v62h48v48h-2v-46h-48v-66h16v-30h-16v-12.1a5 5 0 1 1 2 0zM53.9 18a5 5 0 1 1 0-2H64V2H48V0h18v18H53.9zm112 32a5 5 0 1 1 0-2H192V0h50v2h-48v48h-28.1zm-48-48a5 5 0 0 1-9.8-2h2.07a3 3 0 1 0 5.66 0H178v34h-18V21.9a5 5 0 1 1 2 0V32h14V2h-58.1zm0 96a5 5 0 1 1 0-2H137l32-32h39V21.9a5 5 0 1 1 2 0V66h-40.17l-32 32H117.9zm28.1 90.1a5 5 0 1 1-2 0v-76.51L175.59 80H224V21.9a5 5 0 1 1 2 0V82h-49.59L146 112.41v75.69zm16 32a5 5 0 1 1-2 0v-99.51L184.59 96H300.1a5 5 0 0 1 3.9-3.9v2.07a3 3 0 0 0 0 5.66v2.07a5 5 0 0 1-3.9-3.9H185.41L162 121.41v98.69zm-144-64a5 5 0 1 1-2 0v-3.51l48-48V48h32V0h2v50H66v55.41l-48 48v2.69zM50 53.9v43.51l-48 48V208h26.1a5 5 0 1 1 0 2H0v-65.41l48-48V53.9a5 5 0 1 1 2 0zm-16 16V89.41l-34 34v-2.82l32-32V69.9a5 5 0 1 1 2 0zM12.1 32a5 5 0 1 1 0 2H9.41L0 43.41V40.6L8.59 32h3.51zm265.8 18a5 5 0 1 1 0-2h18.69l7.41-7.41v2.82L297.41 50H277.9zm-16 160a5 5 0 1 1 0-2H288v-71.41l16-16v2.82l-14 14V210h-28.1zm-208 32a5 5 0 1 1 0-2H64v-22.59L40.59 194H21.9a5 5 0 1 1 0-2H41.41L66 216.59V242H53.9zm150.2 14a5 5 0 1 1 0 2H96v-56.6L56.6 162H37.9a5 5 0 1 1 0-2h19.5L98 200.6V256h106.1zm-150.2 2a5 5 0 1 1 0-2H80v-46.59L48.59 178H21.9a5 5 0 1 1 0-2H49.41L82 208.59V258H53.9zM34 39.8v1.61L9.41 66H0v-2h8.59L32 40.59V0h2v39.8zM2 300.1a5 5 0 0 1 3.9 3.9H3.83A3 3 0 0 0 0 302.17V256h18v48h-2v-46H2v42.1zM34 241v63h-2v-62H0v-2h34v1zM17 18H0v-2h16V0h2v18h-1zm273-2h14v2h-16V0h2v16zm-32 273v15h-2v-14h-14v14h-2v-16h18v1zM0 92.1A5.02 5.02 0 0 1 6 97a5 5 0 0 1-6 4.9v-2.07a3 3 0 1 0 0-5.66V92.1zM80 272h2v32h-2v-32zm37.9 32h-2.07a3 3 0 0 0-5.66 0h-2.07a5 5 0 0 1 9.8 0zM5.9 0A5.02 5.02 0 0 1 0 5.9V3.83A3 3 0 0 0 3.83 0H5.9zm294.2 0h2.07A3 3 0 0 0 304 3.83V5.9a5 5 0 0 1-3.9-5.9zm3.9 300.1v2.07a3 3 0 0 0-1.83 1.83h-2.07a5 5 0 0 1 3.9-3.9zM97 100a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-48 32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm32 48a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm32-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0-32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm32 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16-64a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 96a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-144a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-96 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm96 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16-64a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-32 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM49 36a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-32 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm32 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM33 68a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-48a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 240a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16-64a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16-32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm80-176a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm32 48a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0-32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm112 176a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM17 180a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0-32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM17 84a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm32 64a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6z'%3E%3C/path%3E%3C/svg%3E");	animation-name: mi_animacion;
+}
+
+.producto {
+	float:left;
+	width: 22%;
+	height: 250px;
+	margin: 10px;
+	margin-top: 10px;
+	animation-name: mi_animacion;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease;
+	background-color: #000000;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 304 304' width='304' height='304'%3E%3Cpath fill='%23766d6d' fill-opacity='0.77' d='M44.1 224a5 5 0 1 1 0 2H0v-2h44.1zm160 48a5 5 0 1 1 0 2H82v-2h122.1zm57.8-46a5 5 0 1 1 0-2H304v2h-42.1zm0 16a5 5 0 1 1 0-2H304v2h-42.1zm6.2-114a5 5 0 1 1 0 2h-86.2a5 5 0 1 1 0-2h86.2zm-256-48a5 5 0 1 1 0 2H0v-2h12.1zm185.8 34a5 5 0 1 1 0-2h86.2a5 5 0 1 1 0 2h-86.2zM258 12.1a5 5 0 1 1-2 0V0h2v12.1zm-64 208a5 5 0 1 1-2 0v-54.2a5 5 0 1 1 2 0v54.2zm48-198.2V80h62v2h-64V21.9a5 5 0 1 1 2 0zm16 16V64h46v2h-48V37.9a5 5 0 1 1 2 0zm-128 96V208h16v12.1a5 5 0 1 1-2 0V210h-16v-76.1a5 5 0 1 1 2 0zm-5.9-21.9a5 5 0 1 1 0 2H114v48H85.9a5 5 0 1 1 0-2H112v-48h12.1zm-6.2 130a5 5 0 1 1 0-2H176v-74.1a5 5 0 1 1 2 0V242h-60.1zm-16-64a5 5 0 1 1 0-2H114v48h10.1a5 5 0 1 1 0 2H112v-48h-10.1zM66 284.1a5 5 0 1 1-2 0V274H50v30h-2v-32h18v12.1zM236.1 176a5 5 0 1 1 0 2H226v94h48v32h-2v-30h-48v-98h12.1zm25.8-30a5 5 0 1 1 0-2H274v44.1a5 5 0 1 1-2 0V146h-10.1zm-64 96a5 5 0 1 1 0-2H208v-80h16v-14h-42.1a5 5 0 1 1 0-2H226v18h-16v80h-12.1zm86.2-210a5 5 0 1 1 0 2H272V0h2v32h10.1zM98 101.9V146H53.9a5 5 0 1 1 0-2H96v-42.1a5 5 0 1 1 2 0zM53.9 34a5 5 0 1 1 0-2H80V0h2v34H53.9zm60.1 3.9V66H82v64H69.9a5 5 0 1 1 0-2H80V64h32V37.9a5 5 0 1 1 2 0zM101.9 82a5 5 0 1 1 0-2H128V37.9a5 5 0 1 1 2 0V82h-28.1zm16-64a5 5 0 1 1 0-2H146v44.1a5 5 0 1 1-2 0V18h-26.1zm102.2 270a5 5 0 1 1 0 2H98v14h-2v-16h124.1zM242 149.9V160h16v34h-16v62h48v48h-2v-46h-48v-66h16v-30h-16v-12.1a5 5 0 1 1 2 0zM53.9 18a5 5 0 1 1 0-2H64V2H48V0h18v18H53.9zm112 32a5 5 0 1 1 0-2H192V0h50v2h-48v48h-28.1zm-48-48a5 5 0 0 1-9.8-2h2.07a3 3 0 1 0 5.66 0H178v34h-18V21.9a5 5 0 1 1 2 0V32h14V2h-58.1zm0 96a5 5 0 1 1 0-2H137l32-32h39V21.9a5 5 0 1 1 2 0V66h-40.17l-32 32H117.9zm28.1 90.1a5 5 0 1 1-2 0v-76.51L175.59 80H224V21.9a5 5 0 1 1 2 0V82h-49.59L146 112.41v75.69zm16 32a5 5 0 1 1-2 0v-99.51L184.59 96H300.1a5 5 0 0 1 3.9-3.9v2.07a3 3 0 0 0 0 5.66v2.07a5 5 0 0 1-3.9-3.9H185.41L162 121.41v98.69zm-144-64a5 5 0 1 1-2 0v-3.51l48-48V48h32V0h2v50H66v55.41l-48 48v2.69zM50 53.9v43.51l-48 48V208h26.1a5 5 0 1 1 0 2H0v-65.41l48-48V53.9a5 5 0 1 1 2 0zm-16 16V89.41l-34 34v-2.82l32-32V69.9a5 5 0 1 1 2 0zM12.1 32a5 5 0 1 1 0 2H9.41L0 43.41V40.6L8.59 32h3.51zm265.8 18a5 5 0 1 1 0-2h18.69l7.41-7.41v2.82L297.41 50H277.9zm-16 160a5 5 0 1 1 0-2H288v-71.41l16-16v2.82l-14 14V210h-28.1zm-208 32a5 5 0 1 1 0-2H64v-22.59L40.59 194H21.9a5 5 0 1 1 0-2H41.41L66 216.59V242H53.9zm150.2 14a5 5 0 1 1 0 2H96v-56.6L56.6 162H37.9a5 5 0 1 1 0-2h19.5L98 200.6V256h106.1zm-150.2 2a5 5 0 1 1 0-2H80v-46.59L48.59 178H21.9a5 5 0 1 1 0-2H49.41L82 208.59V258H53.9zM34 39.8v1.61L9.41 66H0v-2h8.59L32 40.59V0h2v39.8zM2 300.1a5 5 0 0 1 3.9 3.9H3.83A3 3 0 0 0 0 302.17V256h18v48h-2v-46H2v42.1zM34 241v63h-2v-62H0v-2h34v1zM17 18H0v-2h16V0h2v18h-1zm273-2h14v2h-16V0h2v16zm-32 273v15h-2v-14h-14v14h-2v-16h18v1zM0 92.1A5.02 5.02 0 0 1 6 97a5 5 0 0 1-6 4.9v-2.07a3 3 0 1 0 0-5.66V92.1zM80 272h2v32h-2v-32zm37.9 32h-2.07a3 3 0 0 0-5.66 0h-2.07a5 5 0 0 1 9.8 0zM5.9 0A5.02 5.02 0 0 1 0 5.9V3.83A3 3 0 0 0 3.83 0H5.9zm294.2 0h2.07A3 3 0 0 0 304 3.83V5.9a5 5 0 0 1-3.9-5.9zm3.9 300.1v2.07a3 3 0 0 0-1.83 1.83h-2.07a5 5 0 0 1 3.9-3.9zM97 100a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-48 32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm32 48a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm32-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0-32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm32 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16-64a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 96a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-144a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-96 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm96 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16-64a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-32 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM49 36a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-32 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm32 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM33 68a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-48a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 240a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16-64a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16-32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm80-176a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm32 48a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0-32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm112 176a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM17 180a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0-32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM17 84a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm32 64a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6z'%3E%3C/path%3E%3C/svg%3E");
+}
+.producto:hover{
+	border:1px solid lightcoral;
+	transform: scale(1.1);
+}
+
+.producto > p {
+	font-size: 15px;
+	text-align: center;
+	color: white;
+}
+
+#HardwarePrice {
+	color: white;
+	text-align: center;
+	font-size: 20px;
+}
+
+
+/*-------------------- LAST-CONTAINER -------------------*/
+.last-main-container {
+	width: 100%;
+	height: 500px;
+	margin: 150px 0px 0px 0px;
+	background-color: black;
+	border:2px solid white;
+	color: white;
+	font-size: 20px;
+	padding: 50px;
+}
+
+.last-container {
+	width: 80%;
+	height: auto;
+	margin: auto;
+
+}
+
+.header {
+	display: flex;
+	list-style: none;
+	margin-bottom: 50px;
+	font-size: 30px;
+	border-bottom: 3px solid white;
+
+	flex-direction: row;
+    justify-content: center;
+}
+
+.header li {
+	align-content: center;
+	margin-bottom: 20px;
+}
+
+.last-container-desc {
+	display: flex;
+	justify-content: space-between;
+	list-style: none;
+	margin-left: 200px;
+}
+
+.last-container-desc ul {
+	list-style: none;
+}
+
+.last-container-desc header {
+	font-size: 30px;
+	margin-bottom: 40px;
+	color: gray;
+	text-align: center;
+}
+
+.last-container-desc a {
+	text-decoration: none;
+	color: white;
+}
+
+.last-container-desc li ul li {
+	line-height: 80px;
+}
+
+.last-container-desc img {
+	margin-left: 30px;
+}
+.last-container-desc > li > ul >li > a:hover {
+	border-bottom: 2px solid white;
+}
+
+.image-sz {
+	width: 100px;
+}
+
+.group-items {
+	display: flex;
+}
+
+.group-items header {
+	text-align: center;
+}
+.group-icon {
+	margin: 110px;
+}
+
+/*---------------------- BANNERS -----------------------------*/
+
+.banner{
+	width: 1600px;
+	height: 600px;
+	border: 10px solid black;
+	margin: auto;
+	margin-top: 60px;
+	background-size: 100% 100%;
+	animation:banner;
+	animation-duration: 15s;
+	animation-iteration-count:infinite;
+	animation-direction:alternate;
+	display: flex;
+	color:black;
+	margin-bottom: 40px;
+}
+.banner.info{
+	background-color: rgba(51,51,51,0.6);
+	width: 100%;
+	margin-top:0px;
+	color: white;
+	text-align: center;
+}
+
+@keyframes banner{
+	0%,17%{
+		background-image: url(img/Banners/cod.jpg);
+		opacity: 1;
+	}
+	18%,20%{
+		opacity:0.1;
+	}
+	21%,37%{
+		background-image: url(img/Banners/cyber.jpeg);
+		opacity: 1;
+	}
+	38%,40%{
+		opacity:0.1;
+	}
+	41%,57%{
+		background-image: url(img/Banners/assasin.jpg);
+		opacity: 1;
+	}
+	58%,60%{
+		opacity:0.1;
+	}
+	61%,77%{
+		background-image: url(img/Banners/bio.jpg);
+		opacity: 1;
+	}
+	78%,80%{
+		opacity:0.1;
+	}
+	81%,100%{
+		background-image: url(img/Banners/seki.jpg);
+		opacity: 1;
+
+	}
+}
+
+.banners{
+	width: 1600px;
+	height: 600px;
+	border: 10px solid black;
+	margin: auto;
+	background-size: 100% 100%;
+	animation:banners;
+	animation-duration: 15s;
+	animation-iteration-count:infinite;
+	animation-direction:alternate;
+	display: flex;
+	color:black;
+	margin-bottom: 40px;
+}
+
+.banners.info{
+	background-color: rgba(51,51,51,0.6);
+	width: 100%;
+	margin-top:0px;
+	color: white;
+	text-align: center;
+}
+
+@keyframes banners{
+	0%,17%{
+		background-image: url(img/Banners/wi.jpg);
+		opacity: 1;
+	}
+	18%,20%{
+		opacity:0.1;
+	}
+	21%,37%{
+		background-image: url(img/Banners/mca.jpg);
+		opacity: 1;
+
+	}
+	38%,40%{
+		opacity:0.1;
+	}
+	41%,57%{
+		background-image: url(img/Banners/macba.jpg);
+		opacity: 1;
+
+	}
+	58%,60%{
+		opacity:0.1;
+	}
+	61%,77%{
+		background-image: url(img/Banners/ava.jpg);
+		opacity: 1;
+
+	}
+	78%,80%{
+		opacity:0.1;
+	}
+	81%,100%{
+		background-image: url(img/Banners/kas.jpg);
+		opacity: 1;
+
+	}
+}
+
+.bannerh{
+	width: 1600px;
+	height: 600px;
+	border: 10px solid black;
+	margin: auto;
+	background-size: 100% 100%;
+	animation:bannerh;
+	animation-duration: 15s;
+	animation-iteration-count:infinite;
+	animation-direction:alternate;
+	display: flex;
+	color:black;
+	margin-bottom: 40px;
+}
+
+.bannerh.info{
+	background-color: rgba(51,51,51,0.6);
+	width: 100%;
+	margin-top:0px;
+	color: white;
+	text-align: center;
+}
+
+@keyframes bannerh{
+	0%,17%{
+		background-image: url(img/Banners/ryzen.jpg);
+		opacity: 1;
+	}
+
+	18%,20%{
+		opacity:0.1;
+	}
+
+	21%,37%{
+		background-image: url(img/Banners/intel.jpg);
+		opacity: 1;
+
+	}
+
+	38%,40%{
+		opacity:0.1;
+	}
+
+	41%,57%{
+		background-image: url(img/Banners/NVI.jpg);
+		opacity: 1;
+	}
+
+	58%,60%{
+		opacity:0.1;
+	}
+
+	61%,77%{
+		background-image: url(img/Banners/rade.png);
+		opacity: 1;
+	}
+
+	78%,80%{
+		opacity:0.1;
+	}
+
+	81%,100%{
+		background-image: url(img/Banners/aor.jpg);
+		opacity: 1;
+	}
+}
